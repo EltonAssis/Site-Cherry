@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cherry Admin | Dashboard</title>
+    <link rel="stylesheet" href="../css/admin-dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+<body>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <p>Cherry Admin</p>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-th-large"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-box"></i> Produtos</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Usuários</a></li>
+                    <li><a href="#"><i class="fas fa-receipt"></i> Pedidos</a></li>
+                    <li><a href="#"><i class="fas fa-chart-pie"></i> Relatórios</a></li>
+                    <li><a href="#"><i class="fas fa-tags"></i> Categorias</a></li>
+                    <li><a href="#"><i class="fas fa-warehouse"></i> Estoque</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Configurações</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h2>Dashboard</h2>
+                <div class="user-profile">
+                    <span class="user-name">AM Admin Master</span>
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </header>
+
+            <section class="stats-cards">
+                <div class="card stat-card">
+                    <div class="card-content">
+                        <h4>Vendas Hoje <i class="fas fa-chart-bar icon-top"></i></h4>
+                        <p class="value">R$ 3.450</p>
+                        <p class="change down">-12% desde ontem</p>
+                    </div>
+                </div>
+                <div class="card stat-card">
+                    <div class="card-content">
+                        <h4>Vendas do Mês <i class="fas fa-chart-line icon-top"></i></h4>
+                        <p class="value">R$ 42.890</p>
+                        <p class="change up">+3% desde o mês passado</p>
+                    </div>
+                </div>
+                <div class="card stat-card">
+                    <div class="card-content">
+                        <h4>Usuários Ativos <i class="fas fa-users icon-top"></i></h4>
+                        <p class="value">1.245</p>
+                        <p class="change up">+5% desde a semana passada</p>
+                    </div>
+                </div>
+                <div class="card stat-card">
+                    <div class="card-content">
+                        <h4>Produtos em Estoque <i class="fas fa-warehouse icon-top"></i></h4>
+                        <p class="value">328</p>
+                        <p class="change down">-3% desde a semana passada</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="metrics-row">
+                <div class="card sales-chart">
+                    <h4>Vendas Mensais</h4>
+                    <div class="chart-area">
+                        <div class="chart-bars">
+                            <div class="bar" style="height: 55%;" data-label="Jan"></div>
+                            <div class="bar" style="height: 80%;" data-label="Fev"></div>
+                            <div class="bar" style="height: 65%;" data-label="Mar"></div>
+                            <div class="bar" style="height: 90%;" data-label="Abr"></div>
+                            <div class="bar" style="height: 50%;" data-label="Mai"></div>
+                            <div class="bar" style="height: 75%;" data-label="Jun"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card top-products">
+                    <h4>Produtos Mais Vendidos <a href="#">Este mês</a></h4>
+                    <ul class="product-list-rank">
+                        <li><span>Vibrador Cherry Passion</span> <span>124 un.</span></li>
+                        <li><span>Óleo Massagem Sensual</span> <span>98 un.</span></li>
+                        <li><span>Lingerie Cereja Selvagem</span> <span>87 un.</span></li>
+                        <li><span>Kit Fantasias Românticas</span> <span>76 un.</span></li>
+                        <li><span>Gel Lubrificante Cherry</span> <span>65 un.</span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="orders-section">
+                <h4>Pedidos Recentes <a href="#">Ver todos</a></h4>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID Pedido</th>
+                                <th>Cliente</th>
+                                <th>Data</th>
+                                <th>Valor</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#CH8945">#CH8945</a></td>
+                                <td>Maria Silva</td>
+                                <td>15/06/2023</td>
+                                <td>R$ 289,90</td>
+                                <td><span class="status completed">Concluído</span></td>
+                                <td><i class="fas fa-ellipsis-v"></i></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#CH8944">#CH8944</a></td>
+                                <td>João Santos</td>
+                                <td>15/06/2023</td>
+                                <td>R$ 149,90</td>
+                                <td><span class="status processing">Em processamento</span></td>
+                                <td><i class="fas fa-ellipsis-v"></i></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#CH8943">#CH8943</a></td>
+                                <td>Ana Oliveira</td>
+                                <td>14/06/2023</td>
+                                <td>R$ 378,50</td>
+                                <td><span class="status completed">Concluído</span></td>
+                                <td><i class="fas fa-ellipsis-v"></i></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#CH8942">#CH8942</a></td>
+                                <td>Carlos Mendes</td>
+                                <td>14/06/2023</td>
+                                <td>R$ 89,90</td>
+                                <td><span class="status cancelled">Cancelado</span></td>
+                                <td><i class="fas fa-ellipsis-v"></i></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#CH8941">#CH8941</a></td>
+                                <td>Juliana Costa</td>
+                                <td>13/06/2023</td>
+                                <td>R$ 215,80</td>
+                                <td><span class="status completed">Concluído</span></td>
+                                <td><i class="fas fa-ellipsis-v"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="add-product-section card">
+                <h4>Adicionar Novo Produto</h4>
+                <div class="tab-header">
+                    <button class="tab-button active" data-tab="basic">Informações Básicas</button>
+                    <button class="tab-button" data-tab="images">Imagens</button>
+                    <button class="tab-button" data-tab="stock">Estoque</button>
+                    <button class="tab-button" data-tab="seo">SEO</button>
+                </div>
+
+                <form id="product-form">
+                    <div id="basic" class="tab-content active">
+                        <div class="form-row two-cols">
+                            <div class="form-group">
+                                <label for="productName">Nome do Produto</label>
+                                <input type="text" id="productName" placeholder="Ex: Vibrador Cherry Passion">
+                            </div>
+                            <div class="form-group">
+                                <label for="productPrice">Preço (R$)</label>
+                                <input type="number" id="productPrice" placeholder="Ex: 199.90" step="0.01">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="productDescription">Descrição</label>
+                            <textarea id="productDescription" rows="3" placeholder="Descreva o produto detalhadamente..."></textarea>
+                        </div>
+                        <div class="form-row two-cols">
+                            <div class="form-group">
+                                <label for="productCategory">Categoria</label>
+                                <select id="productCategory">
+                                    <option>Selecione uma categoria</option>
+                                    </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="productBrand">Marca</label>
+                                <select id="productBrand">
+                                    <option>Selecione uma marca</option>
+                                    </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="images" class="tab-content">
+                        <div class="image-upload-area">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Arraste e solte as imagens aqui ou clique para selecionar</p>
+                            <p class="formats">Formatos aceitos: JPG, PNG, Tamanho máximo: 5MB</p>
+                            <input type="file" multiple accept="image/*" style="display:none;">
+                        </div>
+                    </div>
+                    
+                    <div id="stock" class="tab-content">
+                        <div class="form-group">
+                            <label for="productStock">Quantidade em Estoque</label>
+                            <input type="number" id="productStock" placeholder="0">
+                        </div>
+                    </div>
+
+                    <div id="seo" class="tab-content">
+                        <div class="form-group">
+                            <label for="seoTitle">Meta Título</label>
+                            <input type="text" id="seoTitle" placeholder="Título para mecanismos de busca">
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-cancel">Cancelar</button>
+                        <button type="submit" class="btn-submit">Salvar Produto</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+    </body>
+</html>
