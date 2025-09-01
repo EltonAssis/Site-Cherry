@@ -1,4 +1,3 @@
-/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -28,6 +27,12 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
+    flex-wrap: wrap; /* Permite que os itens se quebrem em múltiplas linhas */
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
 }
 
 .search-bar {
@@ -81,6 +86,8 @@ a {
     margin: 0;
     display: flex;
     gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .main-nav a {
@@ -93,8 +100,12 @@ a {
 /* Main Banner Section */
 .main-banner {
     background-color: #c9003c;
+    background-image: url('https://via.placeholder.com/1920x600');
+    background-size: cover;
+    background-position: center;
     padding: 80px 0;
     color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .banner-content {
@@ -133,10 +144,13 @@ a {
     display: flex;
     justify-content: space-around;
     gap: 20px;
+    flex-wrap: wrap; /* Adiciona quebra de linha para os ícones */
 }
 
 .category-item {
     text-align: center;
+    flex-basis: 120px; /* Define uma base para o tamanho dos itens */
+    flex-grow: 1;
 }
 
 .icon-box {
@@ -166,7 +180,8 @@ a {
 }
 
 .product-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Layout flexível com grid */
     gap: 20px;
     justify-content: center;
 }
@@ -177,7 +192,6 @@ a {
     padding: 20px;
     text-align: center;
     position: relative;
-    width: 250px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -253,6 +267,8 @@ a {
     display: flex;
     justify-content: space-around;
     text-align: center;
+    flex-wrap: wrap; /* Permite que os itens se quebrem em múltiplas linhas */
+    gap: 20px;
 }
 
 .service-item {
@@ -273,10 +289,9 @@ a {
 }
 
 .footer .container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Layout flexível com grid */
     gap: 30px;
-    flex-wrap: wrap;
 }
 
 .footer-column {
@@ -325,4 +340,75 @@ a {
     margin-top: 30px;
     font-size: 12px;
     color: #999;
+}
+
+/* --- MEDIA QUERIES PARA RESPONSIVIDADE --- */
+
+/* Telas menores que 768px (tablets e smartphones) */
+@media (max-width: 768px) {
+    .top-header {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        text-align: center;
+        gap: 20px;
+    }
+
+    .search-bar {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .user-actions {
+        justify-content: center; /* Centraliza os ícones */
+        width: 100%;
+        gap: 15px;
+    }
+
+    .user-actions a {
+        flex-direction: row; /* Coloca ícone e texto lado a lado */
+        font-size: 14px;
+    }
+
+    .user-actions i {
+        margin-right: 5px;
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Empilha o menu de navegação */
+        gap: 5px;
+        text-align: center;
+    }
+
+    .categories-icons {
+        transform: translateY(0); /* Remove o deslocamento negativo */
+    }
+
+    .categories-icons .container,
+    .product-list,
+    .services-section .container,
+    .footer .container {
+        /* Garante que os layouts em grid/flex se tornem uma única coluna */
+        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .service-item {
+        max-width: 100%;
+    }
+}
+
+/* Telas menores que 480px (smartphones) */
+@media (max-width: 480px) {
+    .banner-content h1 {
+        font-size: 32px;
+    }
+
+    .banner-content p {
+        font-size: 14px;
+    }
 }

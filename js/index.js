@@ -1,0 +1,1 @@
+var MenuItens = document.getElementsById
