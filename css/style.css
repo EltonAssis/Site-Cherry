@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     background-color: #f7f7f7;
-    color: #333;
+    color: #343;
 }
 
 .container {
@@ -130,6 +130,11 @@ a {
     border-radius: 5px;
     font-weight: bold;
     display: inline-block;
+    transition: background-color 1.5s;
+}
+.btn-explore:hover{
+     background-color: #8d0f2a;
+    color: #f0f0f0;
 }
 
 /* Categories Icons Section */
@@ -151,6 +156,7 @@ a {
     text-align: center;
     flex-basis: 120px; /* Define uma base para o tamanho dos itens */
     flex-grow: 1;
+    
 }
 
 .icon-box {
@@ -162,11 +168,20 @@ a {
     align-items: center;
     justify-content: center;
     margin: 0 auto 10px;
+    transition: background-color 1.5s;
+}
+.icon-box:hover{
+background-color: #c9003c;
 }
 
 .icon-box i {
     font-size: 24px;
     color: #c9003c;
+    transition: color 1.2s;
+}
+
+.icon-box i:hover{
+    color: #ddd
 }
 
 /* Products Section */
