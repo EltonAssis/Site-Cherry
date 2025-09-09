@@ -439,6 +439,50 @@ background-color: #c9003c;
     display: none;
 }
 
+/*-----Listagem de produtos --------------*/
+.linha2{
+    margin: 100px auto 50px;
+    justify-content: space-around;
+    padding-left: 88%;
+    
+}
+
+.linha2 select{
+    padding: 5px;
+    color: #8d0f2a;
+    border: 1px solid var(#c9003c);
+}
+
+.linha2 select :focus{
+    outline: none;
+}
+
+.paginacao{
+    margin: 80px auto 80px;
+    padding-left: 40%;
+}
+.paginacao span{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background 0.5s;
+    
+}
+
+.paginacao span:hover{
+    background: #c9003c;
+    color: #ccc;
+}
+
+
+
+
+
 /*-----Menu Celular --------------*/
 @media only screen and (max-width:800px) {
     nav ul{
