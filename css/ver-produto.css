@@ -1,4 +1,4 @@
-/* General & Body Styling */
+/* --- Estilos Gerais e Base --- */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -13,11 +13,14 @@ body {
     padding: 20px;
 }
 
-/* --- Header Section --- */
+/* --- Cabeçalho --- */
 .main-header {
     background-color: #fff;
     border-bottom: 1px solid #ddd;
     padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header-content {
@@ -90,6 +93,33 @@ body {
     white-space: nowrap;
 }
 
+/* Estilo do Carrinho no Cabeçalho */
+.cart-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cart-icon {
+    font-size: 20px;
+}
+
+.cart-count {
+    background-color: #e5005b;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 50%;
+    padding: 3px 6px;
+    position: absolute;
+    top: -8px;
+    right: -12px;
+    min-width: 18px;
+    text-align: center;
+    line-height: 1;
+}
+
 /* --- Breadcrumbs --- */
 .breadcrumbs {
     padding: 20px 0;
@@ -102,7 +132,7 @@ body {
     color: #888;
 }
 
-/* --- Main Product Section --- */
+/* --- Seção Principal do Produto --- */
 .product-page {
     display: flex;
     gap: 40px;
@@ -320,7 +350,7 @@ body {
     border-radius: 50%;
 }
 
-/* --- Tabs Section --- */
+/* --- Abas de Conteúdo --- */
 .product-tabs {
     background-color: #fff;
     padding: 20px 40px;
@@ -375,7 +405,7 @@ body {
     margin-top: 0;
 }
 
-/* --- Related Products Section --- */
+/* --- Seção de Produtos Relacionados --- */
 .related-products {
     margin-top: 40px;
 }
@@ -422,7 +452,7 @@ body {
     margin: 0;
 }
 
-/* --- Service Icons Section --- */
+/* --- Seção de Serviços --- */
 .service-icons {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -459,7 +489,7 @@ body {
     margin: 0;
 }
 
-/* --- Footer Section --- */
+/* --- Rodapé --- */
 .main-footer {
     background-color: #1a1a1a;
     color: #ccc;
@@ -506,8 +536,6 @@ body {
 /* ====================================
    Responsividade para Telas Menores
    ==================================== */
-
-/* Tablet e Celular (até 768px) */
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
@@ -618,9 +646,13 @@ body {
         gap: 20px;
         text-align: center;
     }
+
+    .cart-count {
+        top: -5px;
+        right: -5px;
+    }
 }
 
-/* Celular (até 480px) */
 @media (max-width: 480px) {
     .container {
         padding: 10px;
@@ -665,7 +697,7 @@ body {
     }
 
     .product-grid {
-        grid-template-columns: 1fr; /* Coluna única em telas muito pequenas */
+        grid-template-columns: 1fr;
     }
     
     .service-icons {

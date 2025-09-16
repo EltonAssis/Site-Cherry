@@ -34,7 +34,10 @@
             </nav>
             <div class="user-actions">
                 <a href="#" class="icon-link">Minha Conta</a>
-                <a href="#" class="icon-link">Favoritos</a>
+                <a href="#" class="icon-link cart-link">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count">0</span>
+                </a>
             </div>
         </div>
     </header>
@@ -59,7 +62,7 @@
             </div>
             
             <div class="product-details">
-                <h1>Nome do Produto Premium</h1>
+                <h1 class="product-title">Nome do Produto Premium</h1>
                 <div class="product-rating">
                     <span>★ ★ ★ ★ ☆</span> 4.5/5 (128 avaliações)
                 </div>
@@ -75,28 +78,28 @@
                 <div class="product-options">
                     <div class="option-group">
                         <label>Cor:</label>
-                        <div class="option-buttons">
-                            <button class="option-button active">Vermelho</button>
-                            <button class="option-button">Preto</button>
-                            <button class="option-button">Branco</button>
-                            <button class="option-button">Azul</button>
+                        <div class="option-buttons" id="color-options">
+                            <button class="option-button active" data-value="Vermelho">Vermelho</button>
+                            <button class="option-button" data-value="Preto">Preto</button>
+                            <button class="option-button" data-value="Branco">Branco</button>
+                            <button class="option-button" data-value="Azul">Azul</button>
                         </div>
                     </div>
                     <div class="option-group">
                         <label>Tamanho:</label>
-                        <div class="option-buttons">
-                            <button class="option-button">P</button>
-                            <button class="option-button">M</button>
-                            <button class="option-button">G</button>
-                            <button class="option-button">GG</button>
+                        <div class="option-buttons" id="size-options">
+                            <button class="option-button" data-value="P">P</button>
+                            <button class="option-button" data-value="M">M</button>
+                            <button class="option-button active" data-value="G">G</button>
+                            <button class="option-button" data-value="GG">GG</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="product-quantity">
-                    <button class="quantity-btn">-</button>
+                    <button class="quantity-btn" data-action="decrease">-</button>
                     <input type="text" value="1" class="quantity-input">
-                    <button class="quantity-btn">+</button>
+                    <button class="quantity-btn" data-action="increase">+</button>
                 </div>
 
                 <div class="product-actions">
@@ -113,16 +116,30 @@
 
         <section class="product-tabs">
             <div class="tab-list">
-                <button class="tab-button active">Descrição</button>
-                <button class="tab-button">Especificações</button>
-                <button class="tab-button">Avaliações</button>
-                <button class="tab-button">Perguntas Frequentes</button>
+                <button class="tab-button active" data-tab="descricao">Descrição</button>
+                <button class="tab-button" data-tab="especificacoes">Especificações</button>
+                <button class="tab-button" data-tab="avaliacoes">Avaliações</button>
+                <button class="tab-button" data-tab="perguntas">Perguntas Frequentes</button>
             </div>
-            <div class="tab-content active">
-                <h2>Descrição Detalhada</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+            <div class="tab-content-container">
+                <div class="tab-content active" id="descricao">
+                    <h2>Descrição Detalhada</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                </div>
+                <div class="tab-content" id="especificacoes">
+                    <h2>Especificações Técnicas</h2>
+                    <p>Detalhes do produto...</p>
+                </div>
+                <div class="tab-content" id="avaliacoes">
+                    <h2>Avaliações de Clientes</h2>
+                    <p>Comentários sobre o produto...</p>
+                </div>
+                <div class="tab-content" id="perguntas">
+                    <h2>Perguntas Frequentes</h2>
+                    <p>Respostas para as perguntas mais comuns...</p>
+                </div>
             </div>
         </section>
 
@@ -182,7 +199,6 @@
                 <p>Atendimento 7 dias por semana</p>
             </div>
         </section>
-
     </div>
 
     <footer class="main-footer">
@@ -216,6 +232,7 @@
             </div>
         </div>
     </footer>
-<script src="../js/ver-produto.js"></script>
+
+    <script src="../js/ver-produto.js"></script>
 </body>
 </html>
